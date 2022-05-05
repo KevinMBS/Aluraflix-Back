@@ -1,6 +1,9 @@
 import express from "express";
+import videosController from "../controllers/videosController.js"
 
 const router = express.Router()
-console.log("implementar Push, post, get, delete.........")
+
+router
+    .get('/videos', videosController.listarVideos)
 
 export default router
