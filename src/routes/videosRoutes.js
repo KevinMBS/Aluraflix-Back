@@ -5,5 +5,6 @@ const router = express.Router()
 
 router
     .get('/videos', videosController.listarVideos)
+    .post('/videos', videosController.novoVideo)
 
 export default router
