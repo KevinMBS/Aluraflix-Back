@@ -8,5 +8,6 @@ router
     .get('/videos/:id', videosController.listVideoById)
     .put('/videos/:id', videosController.attVideo)
     .post('/videos', videosController.newVideo)
+    .delete('/videos/:id', videosController.deleteVideoById)
 
 export default router

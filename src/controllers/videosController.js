@@ -43,6 +43,18 @@ class videosController{
             }
         })
     }
+
+    static deleteVideoById = (req, res) =>{
+        const id = req.params.id
+
+        videoModel.findByIdAndDelete(id, (err)=>{
+            if(err){
+                res.status(500).send({message: `${err.message} - Error cannot delete Video`})
+            }else{
+                res.status(200).send({message: `Video successfully deleted`})
+            }
+        })
+    }
 }
 
 export default videosController
